@@ -1,0 +1,47 @@
+type Query {
+  roomList: [Int!]!
+  signIn(name: String!, password: String!): String!
+  logIn(name: String!): Boolean
+  roomPlayer(roomName: String!): [User]
+  game(name: String!, roomName: String!): GameReturn
+  route(name: String!, token: String): String!
+}
+type Mutation {
+  signUp(name: String!, password: String!): String!
+  enterRoom(name: String!, roomName: String!): String
+  leaveRoom(name: String!, roomName: String!): String
+  prepare(name: String!, roomName: String!): String!
+  unprepare(name: String!, roomName: String!): String!
+  logout(name: String!): Boolean!
+  action(
+    from: String!
+    to: String
+    card: Int!
+    roomName: String!
+    cardTo: Int
+  ): Boolean!
+  route(name: String!, token: String!, route: String!): String!
+  createRoom(name: String!): Boolean
+}
+type Subscription {
+  roomList: [Int!]!
+  roomPlayer(roomName: String!): [User]
+  game(name: String, roomName: String!): GameReturn
+}
+
+type User {
+  name: String!
+  isPrepared: Boolean
+  out: Boolean
+  protected: Boolean
+  card: [Int]
+}
+type GameReturn {
+  end: Boolean
+  log: String
+  turn: String
+  cardLeft: Int
+  cardUsed: Int
+  users: [User]
+  winner: [String]
+}

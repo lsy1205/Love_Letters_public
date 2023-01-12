@@ -1,0 +1,117 @@
+.origin {
+  position: absolute;
+  height: 33vh;
+  width: 11.5vw;
+  top: 37%;
+  left: 65%;
+  animation-name: flip;
+  animation-duration: 0.8s;
+}
+
+.move {
+  animation-name: m;
+  animation-duration: 1s;
+}
+
+.oppo {
+  opacity: 1;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  border: 4px solid white;
+  border-radius: 3px;
+  z-index: 10;
+}
+
+.oppo:hover {
+  opacity: 1;
+  border: 4px solid red;
+  cursor: pointer;
+}
+
+@keyframes example {
+  0% {
+    left: 37vw;
+    top: 26vh;
+    content: url("https://i.imgur.com/RhUNqco.png");
+    transform: rotateX(0);
+  }
+  50% {
+    transform: rotateX(90);
+  }
+  100% {
+    left: 37%;
+    top: 65%;
+    content: url("https://i.imgur.com/2v5Ynkv.png");
+    transform: rotateX(90);
+  }
+}
+
+@keyframes m {
+  0% {
+    left: 45%;
+    top: 65%;
+  }
+  100% {
+    left: 51%;
+    top: 65%;
+  }
+}
+
+@keyframes flip {
+  0% {
+    left: 37vw;
+    top: 26vh;
+    content: url("https://i.imgur.com/RhUNqco.png");
+    transform: rotateY(0);
+    content: url("https://i.imgur.com/RhUNqco.png");
+  }
+
+  45% {
+    transform: rotateY(90deg);
+    content: url("https://i.imgur.com/RhUNqco.png");
+  }
+
+  65% {
+    transform: rotateY(90deg);
+    content: url("https://i.imgur.com/2v5Ynkv.png");
+  }
+
+  100% {
+    transform: rotateY(0deg);
+    content: url("https://i.imgur.com/2v5Ynkv.png");
+  }
+}
+
+@keyframes draw-down {
+}
+@keyframes move-right {
+}
+
+@keyframes move-left {
+  0% {
+    left: 45%;
+    top: 65%;
+  }
+  100% {
+    left: 51%;
+    top: 65%;
+  }
+}
+
+@keyframes use-card {
+}
+
+.myself {
+  position: absolute;
+  height: 38vh;
+  width: 30vw;
+  bottom: 0vh;
+  border: solid white 4px;
+  z-index: 10;
+}
+
+.myself:hover {
+  border: solid red 4px;
+  cursor: pointer;
+}

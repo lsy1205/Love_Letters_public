@@ -1,0 +1,22 @@
+.leaderboard {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  border-radius: 2%;
+  background-color: #cb7e3ec5;
+  position: absolute;
+  width: 20vw;
+  top: 2vh;
+  left: 3vh;
+}
+
+td,
+th {
+  height: 5vh;
+  text-align: left;
+  padding: 8px;
+  font-size: 1%;
+}
+
+tr:nth-child(even) {
+  background-color: #ffffff9a;
+}
